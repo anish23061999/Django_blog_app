@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <style>
+        h1 {
+            color: #ffffff;
+        {
+    </style>
+    <container class="media content-section">
+        <h1>Add comment</h1>
+        <form method="POST" class="post-form">{% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-secondary btn-sm mt-1 mb-1">Send</button>
+        </form>
+    </container>
+
+{% endblock %}
